@@ -5,7 +5,15 @@ const Images = () => {
     const [imagesData , setImagesData] = useState([])
 
     const fetchUrlData = async () => {
-        const res = await fetch("https://singhstyleksndfk3409sdfnsdfk23.herokuapp.com/")
+        const res = await fetch("https://singhstyleksndfk3409sdfnsdfk23.herokuapp.com/", {
+            method: "GET",
+            headers: {
+                Accept: "application/json",
+                "Content-Type" : "application/json"
+            },
+            credentials: "include",
+            mode: "no-cors"
+        })
         const data = await res.json()
         setImagesData(data.images)
         console.log(data.images)

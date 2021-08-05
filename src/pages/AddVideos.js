@@ -46,6 +46,7 @@ const AddVideos = () => {
                     "Content-Type": "application/json"
                 },
                 credentials: "include",
+                mode: "no-cors"
             })
 
             const data = await res.json()

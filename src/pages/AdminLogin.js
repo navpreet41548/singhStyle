@@ -17,6 +17,7 @@ const AdminLogin = () => {
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ name, password }),
             credentials: 'include',
+            mode: "no-cors"
         })
         const data = await res.json()
         if (res.status == 400) {
