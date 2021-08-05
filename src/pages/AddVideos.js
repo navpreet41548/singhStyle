@@ -22,7 +22,9 @@ const AddVideos = () => {
             const res = await fetch("https://singhstyleksndfk3409sdfnsdfk23.herokuapp.com/upload/video/610827f663aac72f185a8cde", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ url: videoUrl, id: "this is id" })
+                body: JSON.stringify({ url: videoUrl, id: "this is id" }),
+                mode: "no-cors"
+            
             })
         
         const data = await res.json()
@@ -43,7 +45,7 @@ const AddVideos = () => {
                     Accept: "application/json",
                     "Content-Type": "application/json"
                 },
-                credentials: "include"
+                credentials: "include",
             })
 
             const data = await res.json()
