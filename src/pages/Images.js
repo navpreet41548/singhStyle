@@ -14,7 +14,7 @@ const Images = () => {
             credentials: "include",
             mode: "no-cors"
         })
-        const data = await res.json()
+        const data = await res.text()
         setImagesData(data.images)
         console.log(data.images)
     }
