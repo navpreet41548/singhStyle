@@ -12,7 +12,6 @@ const Images = () => {
                 "Content-Type" : "application/json"
             },
             credentials: "include",
-            mode: "no-cors"
         })
         const data = await res.text()
         setImagesData(data.images)

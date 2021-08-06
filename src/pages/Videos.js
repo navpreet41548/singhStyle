@@ -11,8 +11,7 @@ const Videos = () => {
                 Accept: "application/json",
                 "Content-Type" : "application/json"
             },
-            credentials: "include",
-            mode: "no-cors"
+            credentials: "include"
         })
         const data = await res.json()
         setVideosData(data.video)

@@ -23,7 +23,6 @@ const AddVideos = () => {
             method: "POST",
             headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ url: videoUrl, id: "this is id" }),
-                mode: "no-cors"
             
             })
         
@@ -45,8 +44,7 @@ const AddVideos = () => {
                     Accept: "application/json",
                     "Content-Type": "application/json"
                 },
-                credentials: "include",
-                mode: "no-cors"
+                credentials: "include"
             })
 
             const data = await res.json()

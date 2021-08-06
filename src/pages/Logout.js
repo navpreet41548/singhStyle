@@ -13,8 +13,7 @@ const Logout = () => {
                 Accept: "application/json",
                 "Content-Type" : "application/json"
             },
-            credentials: "include",
-            mode: "no-cors"
+            credentials: "include"
         }).then((res) => {
             if (res.status == 200) {
                 dispatch({type: "USER", payload: false})
